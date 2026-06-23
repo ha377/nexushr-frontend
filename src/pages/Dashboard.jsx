@@ -56,95 +56,67 @@ return (
             >
                 Dashboard
             </h1>
-        <h2>Total Employees</h2>
 
-        <h1 className="text-3xl">
-            {stats.totalEmployees || 0}
-        </h1>
-    </div>
+            <div
+                className="
+                    grid
+                    grid-cols-3
+                    gap-5
+                    mb-8
+                "
+            >
 
-    <div
-        className="
-            bg-yellow-500
-            text-white
-            p-5
-            rounded
-        "
-    >
-        <h2>Pending Leaves</h2>
+                <div className="bg-blue-500 text-white p-5 rounded">
+                    <h2>Total Employees</h2>
+                    <h1 className="text-3xl">
+                        {stats.totalEmployees || 0}
+                    </h1>
+                </div>
 
-        <h1 className="text-3xl">
-            {stats.pendingLeaves || 0}
-        </h1>
-    </div>
+                <div className="bg-yellow-500 text-white p-5 rounded">
+                    <h2>Pending Leaves</h2>
+                    <h1 className="text-3xl">
+                        {stats.pendingLeaves || 0}
+                    </h1>
+                </div>
 
-    <div
-        className="
-            bg-green-500
-            text-white
-            p-5
-            rounded
-        "
-    >
-        <h2>Approved Leaves</h2>
+                <div className="bg-green-500 text-white p-5 rounded">
+                    <h2>Approved Leaves</h2>
+                    <h1 className="text-3xl">
+                        {stats.approvedLeaves || 0}
+                    </h1>
+                </div>
 
-        <h1 className="text-3xl">
-            {stats.approvedLeaves || 0}
-        </h1>
-    </div>
+                <div className="bg-red-500 text-white p-5 rounded">
+                    <h2>Rejected Leaves</h2>
+                    <h1 className="text-3xl">
+                        {stats.rejectedLeaves || 0}
+                    </h1>
+                </div>
 
-    <div
-        className="
-            bg-red-500
-            text-white
-            p-5
-            rounded
-        "
-    >
-        <h2>Rejected Leaves</h2>
+                <div className="bg-purple-500 text-white p-5 rounded">
+                    <h2>Total Candidates</h2>
+                    <h1 className="text-3xl">
+                        {stats.totalCandidates || 0}
+                    </h1>
+                </div>
 
-        <h1 className="text-3xl">
-            {stats.rejectedLeaves || 0}
-        </h1>
-    </div>
+                <div className="bg-indigo-500 text-white p-5 rounded">
+                    <h2>Selected Candidates</h2>
+                    <h1 className="text-3xl">
+                        {stats.selectedCandidates || 0}
+                    </h1>
+                </div>
 
-    <div
-        className="
-            bg-purple-500
-            text-white
-            p-5
-            rounded
-        "
-    >
-        <h2>Total Candidates</h2>
-
-        <h1 className="text-3xl">
-            {stats.totalCandidates || 0}
-        </h1>
-    </div>
-
-    <div
-        className="
-            bg-indigo-500
-            text-white
-            p-5
-            rounded
-        "
-    >
-        <h2>Selected Candidates</h2>
-
-        <h1 className="text-3xl">
-            {stats.selectedCandidates || 0}
-        </h1>
-    </div>
-
-</div>
-            {/* Attendance Chart */}
+            </div>
 
             <AttendanceChart />
-<NotificationBell />
+
+            <NotificationBell />
+
         </div>
-    );
-}
+
+    </div>
+);}
 
 export default Dashboard;
