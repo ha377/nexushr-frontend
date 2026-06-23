@@ -18,7 +18,7 @@ function AttendanceCalendar() {
 
             const response =
                 await axios.get(
-                    "http://localhost:8082/attendance/calendar/1"
+                    "https://nexushr-backend-1.onrender.com/attendance/calendar/1"
                 );
 
             setAttendance(

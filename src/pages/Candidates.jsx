@@ -18,7 +18,7 @@ function Candidates() {
         try {
 
             const response = await axios.get(
-                "http://localhost:8082/candidates"
+                "https://nexushr-backend-1.onrender.com/candidates"
             );
 
             setCandidates(response.data);

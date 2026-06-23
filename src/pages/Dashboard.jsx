@@ -18,7 +18,7 @@ function Dashboard() {
         try {
 
             const response = await axios.get(
-                "http://localhost:8082/dashboard/stats"
+                "https://nexushr-backend-1.onrender.com/dashboard/stats"
             );
 
             setStats(response.data);

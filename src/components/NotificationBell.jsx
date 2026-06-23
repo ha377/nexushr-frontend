@@ -15,7 +15,7 @@ function NotificationBell() {
 
             webSocketFactory: () =>
                 new SockJS(
-                    "http://localhost:8082/ws"
+                    "https://nexushr-backend-1.onrender.com/ws"
                 ),
 
             reconnectDelay: 5000,

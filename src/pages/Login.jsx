@@ -11,7 +11,7 @@ function Login() {
         try {
 
             const response = await fetch(
-                "http://localhost:8082/auth/login",
+                "https://nexushr-backend-1.onrender.com",
                 {
                     method: "POST",
 

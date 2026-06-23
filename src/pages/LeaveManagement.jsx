@@ -11,7 +11,7 @@ function LeaveManagement() {
 
             const response =
                 await axios.get(
-                    "http://localhost:8082/leave"
+                    "https://nexushr-backend-1.onrender.com/leave"
                 );
 
             setLeaves(response.data);
