@@ -11,7 +11,7 @@ function Login() {
         try {
 
             const response = await fetch(
-                "https://nexushr-backend-1.onrender.com",
+                "https://nexushr-backend-1.onrender.com/auth/login",
                 {
                     method: "POST",
 
@@ -26,7 +26,14 @@ function Login() {
                 }
             );
 
-            const data = await response.json();
+            if (!response.ok) {
+    const text = await response.text();
+    console.log("Server Error:", text);
+    alert("Login Failed");
+    return;
+}
+
+const data = await response.json();
 console.log("Login Response:", data);
 console.log("Role:", data.role);
             if (data.token) {
