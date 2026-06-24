@@ -40,7 +40,7 @@ function Candidates() {
         try {
 
             await axios.post(
-                "http://localhost:8082/candidates",
+                "http://nexushr-backend-1.onrender.com/candidates",
                 form
             );
 
@@ -201,7 +201,7 @@ function Candidates() {
         onChange={async (e) => {
 
             await axios.put(
-                `http://localhost:8082/candidates/${candidate.id}/status?status=${e.target.value}`
+                `http://nexushr-backend-1.onrender.com/candidates/${candidate.id}/status?status=${e.target.value}`
             );
 
             loadCandidates();
@@ -241,7 +241,7 @@ function Candidates() {
             </table>
 <a
  href={
-  `http://localhost:8082/candidates/resume/${candidate.resumeFileName}`
+  `http://nexushr-backend-1.onrender.com/candidates/resume/${candidate.resumeFileName}`
  }
  target="_blank"
 >
