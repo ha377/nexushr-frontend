@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Sidebar from "../components/SidebarSelector";
 
 function Candidates() {
 
@@ -40,7 +41,7 @@ function Candidates() {
         try {
 
             await axios.post(
-                "http://nexushr-backend-1.onrender.com/candidates",
+                "https://nexushr-backend-1.onrender.com/candidates",
                 form
             );
 
@@ -62,7 +63,17 @@ function Candidates() {
 
     return (
 
-        <div className="p-6">
+        <div style={{ display: "flex" }}>
+
+    <Sidebar />
+
+    <div
+        style={{
+            marginLeft: "270px",
+            padding: "30px",
+            width: "100%"
+        }}
+    >
 
             <h1 className="text-3xl font-bold mb-5">
                 Candidate Management
@@ -201,7 +212,7 @@ function Candidates() {
         onChange={async (e) => {
 
             await axios.put(
-                `http://nexushr-backend-1.onrender.com/candidates/${candidate.id}/status?status=${e.target.value}`
+                `https://nexushr-backend-1.onrender.com/candidates/${candidate.id}/status?status=${e.target.value}`
             );
 
             loadCandidates();
@@ -241,13 +252,14 @@ function Candidates() {
             </table>
 <a
  href={
-  `http://nexushr-backend-1.onrender.com/candidates/resume/${candidate.resumeFileName}`
+  `https://nexushr-backend-1.onrender.com/candidates/resume/${candidate.resumeFileName}`
  }
  target="_blank"
 >
  Download Resume
 </a>
         </div>
+</div>
     );
 }
 
