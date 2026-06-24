@@ -1,4 +1,4 @@
-import Sidebar from "../components/SidebarSelector";
+import SidebarSelector from "../components/SidebarSelector";
 
 function EmployeeProfile() {
 

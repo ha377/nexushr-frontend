@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Sidebar from "../components/SidebarSelector";
-
+import SidebarSelector from "../components/SidebarSelector";
 import API from "../services/api";
 
 function Payroll() {

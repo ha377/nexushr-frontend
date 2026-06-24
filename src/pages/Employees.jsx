@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import API from "../services/api";
-import Sidebar from "../components/SidebarSelector";
-
+import SidebarSelector from "../components/SidebarSelector";
 function Employees() {
 
     const [employees, setEmployees] = useState([]);
