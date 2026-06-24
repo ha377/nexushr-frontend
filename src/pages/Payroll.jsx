@@ -82,7 +82,7 @@ function Payroll() {
 <button
     onClick={() =>
         window.open(
-            "http://localhost:8082/payslip/1"
+            "https://nexushr-backend-1.onrender.com/payslip/1"
         )
     }
 >

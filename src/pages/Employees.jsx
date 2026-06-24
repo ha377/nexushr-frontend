@@ -33,7 +33,7 @@ function Employees() {
 
         const response =
             await axios.post(
-                "http://localhost:8082/employees/upload-photo",
+                "https://nexushr-backend-1.onrender.com/employees/upload-photo",
                 formData,
                 {
                     headers: {

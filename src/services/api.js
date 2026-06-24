@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:8082"
+    baseURL: "https://nexushr-backend-1.onrender.com"
 });
 
 export default API;
